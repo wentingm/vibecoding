@@ -126,7 +126,7 @@ export default function StoryPlayerScreen() {
         setIsPlaying(true);
         const bestVoice = await getBestVoice();
         Speech.speak(pageText, {
-          rate: 0.78,
+          rate: 0.62,
           pitch: 1.0,
           voice: bestVoice,
           onDone: () => {
