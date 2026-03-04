@@ -34,9 +34,23 @@ async function getBestVoice(): Promise<string | undefined> {
   try {
     const voices = await Speech.getAvailableVoicesAsync();
     const enVoices = voices.filter(v => v.language.startsWith('en'));
-    const premium = enVoices.find(v => v.quality === 'Enhanced' && v.identifier.includes('premium'));
-    const enhanced = enVoices.find(v => v.quality === 'Enhanced');
-    return (premium || enhanced)?.identifier;
+    // Prefer female voices with premium/enhanced quality — more soothing for bedtime
+    const preferredNames = ['Ava', 'Samantha', 'Zoe', 'Karen', 'Moira'];
+    for (const name of preferredNames) {
+      const premium = enVoices.find(v => v.identifier.toLowerCase().includes(name.toLowerCase()) && v.quality === 'Enhanced');
+      if (premium) {
+        console.log('[Voice] Using premium:', premium.identifier);
+        return premium.identifier;
+      }
+    }
+    const anyEnhanced = enVoices.find(v => v.quality === 'Enhanced');
+    if (anyEnhanced) {
+      console.log('[Voice] Using enhanced:', anyEnhanced.identifier);
+      return anyEnhanced.identifier;
+    }
+    const anyEn = enVoices[0];
+    console.log('[Voice] Using default:', anyEn?.identifier);
+    return anyEn?.identifier;
   } catch {
     return undefined;
   }
@@ -112,8 +126,8 @@ export default function StoryPlayerScreen() {
         setIsPlaying(true);
         const bestVoice = await getBestVoice();
         Speech.speak(pageText, {
-          rate: 0.82,
-          pitch: 1.05,
+          rate: 0.78,
+          pitch: 1.0,
           voice: bestVoice,
           onDone: () => {
             setIsPlaying(false);
