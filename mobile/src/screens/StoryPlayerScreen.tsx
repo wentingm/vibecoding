@@ -29,6 +29,19 @@ type RoutePropType = RouteProp<RootStackParamList, 'StoryPlayer'>;
 
 const AUTO_ADVANCE_SECONDS = 15;
 
+// Pick the best available iOS voice (premium > enhanced > default)
+async function getBestVoice(): Promise<string | undefined> {
+  try {
+    const voices = await Speech.getAvailableVoicesAsync();
+    const enVoices = voices.filter(v => v.language.startsWith('en'));
+    const premium = enVoices.find(v => v.quality === 'Enhanced' && v.identifier.includes('premium'));
+    const enhanced = enVoices.find(v => v.quality === 'Enhanced');
+    return (premium || enhanced)?.identifier;
+  } catch {
+    return undefined;
+  }
+}
+
 export default function StoryPlayerScreen() {
   const navigation = useNavigation<NavigationProp>();
   const route = useRoute<RoutePropType>();
@@ -97,9 +110,11 @@ export default function StoryPlayerScreen() {
       // Fall back to expo-speech (works in Expo Go)
       if (pageText) {
         setIsPlaying(true);
+        const bestVoice = await getBestVoice();
         Speech.speak(pageText, {
-          rate: 0.85,
-          pitch: 1.1,
+          rate: 0.82,
+          pitch: 1.05,
+          voice: bestVoice,
           onDone: () => {
             setIsPlaying(false);
             handleAutoAdvance();
