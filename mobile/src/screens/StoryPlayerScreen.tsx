@@ -13,6 +13,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { Audio, isAudioAvailable } from '../hooks/useAudio';
+import * as Speech from 'expo-speech';
 import { COLORS, FONTS, SPACING, RADIUS } from '../constants/theme';
 import { Story } from '../types';
 
@@ -52,42 +53,63 @@ export default function StoryPlayerScreen() {
   // Cleanup audio on unmount
   useEffect(() => {
     return () => {
-      if (sound) {
-        sound.unloadAsync();
-      }
-      if (timerRef.current) {
-        clearInterval(timerRef.current);
-      }
+      if (sound) sound.unloadAsync();
+      Speech.stop();
+      if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [sound]);
 
-  // Try to load and play audio for the current page
+  // Play audio or TTS for the current page
   useEffect(() => {
     const loadAudio = async () => {
+      // Stop any previous speech
+      Speech.stop();
       if (sound) {
         await sound.unloadAsync();
         setSound(null);
       }
+
       const audioUrl = currentPage?.audio_url;
-      if (!audioUrl || !isAudioAvailable) {
-        startAutoAdvanceTimer();
-        return;
+      const pageText = currentPage?.text;
+
+      // Try expo-av first (native build), fall back to expo-speech (Expo Go)
+      if (audioUrl && isAudioAvailable) {
+        try {
+          await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
+          const { sound: newSound } = await Audio.Sound.createAsync(
+            { uri: audioUrl },
+            { shouldPlay: true }
+          );
+          setSound(newSound);
+          setIsPlaying(true);
+          newSound.setOnPlaybackStatusUpdate((status: any) => {
+            if (status.isLoaded && status.didJustFinish) {
+              setIsPlaying(false);
+              handleAutoAdvance();
+            }
+          });
+          return;
+        } catch (e) {
+          console.log('[StoryPlayer] expo-av error:', e);
+        }
       }
-      try {
-        await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
-        const { sound: newSound } = await Audio.Sound.createAsync(
-          { uri: audioUrl },
-          { shouldPlay: true }
-        );
-        setSound(newSound);
+
+      // Fall back to expo-speech (works in Expo Go)
+      if (pageText) {
         setIsPlaying(true);
-        newSound.setOnPlaybackStatusUpdate((status: any) => {
-          if (status.isLoaded && status.didJustFinish) {
+        Speech.speak(pageText, {
+          rate: 0.85,
+          pitch: 1.1,
+          onDone: () => {
             setIsPlaying(false);
             handleAutoAdvance();
-          }
+          },
+          onError: () => {
+            setIsPlaying(false);
+            startAutoAdvanceTimer();
+          },
         });
-      } catch {
+      } else {
         startAutoAdvanceTimer();
       }
     };
@@ -187,6 +209,7 @@ export default function StoryPlayerScreen() {
 
   const handleClose = () => {
     if (sound) sound.unloadAsync();
+    Speech.stop();
     if (timerRef.current) clearInterval(timerRef.current);
     navigation.goBack();
   };
