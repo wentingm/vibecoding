@@ -7,6 +7,7 @@ import {
   Dimensions,
   Animated,
   Platform,
+  Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
@@ -221,7 +222,15 @@ export default function StoryPlayerScreen() {
         >
           {/* Illustration panel */}
           <View style={styles.illustrationPanel}>
-            <Text style={styles.illustrationEmoji}>{pageEmoji}</Text>
+            {currentPage?.illustration_url ? (
+              <Image
+                source={{ uri: currentPage.illustration_url }}
+                style={styles.illustrationImage}
+                resizeMode="cover"
+              />
+            ) : (
+              <Text style={styles.illustrationEmoji}>{pageEmoji}</Text>
+            )}
             {/* Auto-advance progress arc */}
             <View style={styles.timerIndicator}>
               <Text style={styles.timerText}>{autoAdvanceTimer}s</Text>
@@ -335,6 +344,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
+  },
+  illustrationImage: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 0,
   },
   illustrationEmoji: {
     fontSize: 120,
