@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   View,
   Text,
@@ -13,6 +13,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { COLORS, FONTS, SPACING, RADIUS } from '../constants/theme';
 import { ChildProfile } from '../types';
 import StarBackground from '../components/StarBackground';
+import * as Speech from 'expo-speech';
 
 const { width } = Dimensions.get('window');
 
@@ -37,6 +38,17 @@ export default function StoryModeSelectScreen() {
     if (hour < 17) return 'Good afternoon';
     return 'Good evening';
   };
+
+  useEffect(() => {
+    const greeting = `${getGreeting()}, ${profile.name}! Ready for a bedtime story?`;
+    const timer = setTimeout(() => {
+      Speech.speak(greeting, { rate: 0.78, pitch: 1.0 });
+    }, 400);
+    return () => {
+      clearTimeout(timer);
+      Speech.stop();
+    };
+  }, []);
 
   return (
     <LinearGradient
