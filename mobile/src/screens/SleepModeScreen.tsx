@@ -10,9 +10,18 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Audio } from 'expo-av';
-import * as Brightness from 'expo-brightness';
-import { activateKeepAwakeAsync, deactivateKeepAwake } from 'expo-keep-awake';
+import { Audio, isAudioAvailable } from '../hooks/useAudio';
+
+let Brightness: any = null;
+try { Brightness = require('expo-brightness'); } catch {}
+
+let activateKeepAwakeAsync: any = null;
+let deactivateKeepAwake: any = null;
+try {
+  const ka = require('expo-keep-awake');
+  activateKeepAwakeAsync = ka.activateKeepAwakeAsync;
+  deactivateKeepAwake = ka.deactivateKeepAwake;
+} catch {}
 import { COLORS, FONTS, SPACING, RADIUS } from '../constants/theme';
 
 const { width, height } = Dimensions.get('window');
@@ -77,7 +86,7 @@ export default function SleepModeScreen() {
   const [selectedTimer, setSelectedTimer] = useState(TIMER_OPTIONS[1]);
   const [secondsLeft, setSecondsLeft] = useState<number | null>(null);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
-  const [sound, setSound] = useState<Audio.Sound | null>(null);
+  const [sound, setSound] = useState<any>(null);
 
   const bgAnim = useRef(new Animated.Value(0)).current;
   const moonScale = useRef(new Animated.Value(1)).current;
@@ -88,7 +97,7 @@ export default function SleepModeScreen() {
 
   useEffect(() => {
     // Keep screen on
-    activateKeepAwakeAsync();
+    activateKeepAwakeAsync?.();
     // Dim screen
     dimScreen();
     // Start animations
@@ -97,7 +106,7 @@ export default function SleepModeScreen() {
     timerHideRef.current = setTimeout(() => hideTimerPanel(), 10000);
 
     return () => {
-      deactivateKeepAwake();
+      deactivateKeepAwake?.();
       restoreBrightness();
       if (sound) sound.unloadAsync();
       if (timerHideRef.current) clearTimeout(timerHideRef.current);
@@ -107,18 +116,15 @@ export default function SleepModeScreen() {
 
   const dimScreen = async () => {
     try {
+      if (!Brightness) return;
       const { status } = await Brightness.requestPermissionsAsync();
-      if (status === 'granted') {
-        await Brightness.setSystemBrightnessAsync(0.05);
-      }
-    } catch {
-      // Brightness not available
-    }
+      if (status === 'granted') await Brightness.setSystemBrightnessAsync(0.05);
+    } catch {}
   };
 
   const restoreBrightness = async () => {
     try {
-      await Brightness.setSystemBrightnessAsync(0.5);
+      if (Brightness) await Brightness.setSystemBrightnessAsync(0.5);
     } catch {}
   };
 

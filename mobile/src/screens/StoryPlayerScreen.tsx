@@ -11,7 +11,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Audio } from 'expo-av';
+import { Audio, isAudioAvailable } from '../hooks/useAudio';
 import { COLORS, FONTS, SPACING, RADIUS } from '../constants/theme';
 import { Story } from '../types';
 
@@ -68,8 +68,7 @@ export default function StoryPlayerScreen() {
         setSound(null);
       }
       const audioUrl = currentPage?.audio_url;
-      if (!audioUrl) {
-        // No audio, start auto-advance timer
+      if (!audioUrl || !isAudioAvailable) {
         startAutoAdvanceTimer();
         return;
       }
@@ -81,14 +80,13 @@ export default function StoryPlayerScreen() {
         );
         setSound(newSound);
         setIsPlaying(true);
-        newSound.setOnPlaybackStatusUpdate((status) => {
+        newSound.setOnPlaybackStatusUpdate((status: any) => {
           if (status.isLoaded && status.didJustFinish) {
             setIsPlaying(false);
             handleAutoAdvance();
           }
         });
       } catch {
-        // Audio failed, use timer
         startAutoAdvanceTimer();
       }
     };
