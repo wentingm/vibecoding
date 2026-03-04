@@ -1,12 +1,17 @@
 import axios from 'axios';
 import * as SecureStore from 'expo-secure-store';
+import Constants from 'expo-constants';
 
-const API_URL = 'https://shy-jokes-rush.loca.lt/api/v1';
+// Simulator uses local IP directly; real device goes through tunnel
+const LOCAL_API  = 'http://10.100.1.95:8000/api/v1';
+const TUNNEL_API = 'https://shy-jokes-rush.loca.lt/api/v1';
+
+const API_URL = Constants.isDevice ? TUNNEL_API : LOCAL_API;
 
 export const apiClient = axios.create({
   baseURL: API_URL,
   timeout: 10000,
-  headers: { 'bypass-tunnel-reminder': 'true' },
+  headers: Constants.isDevice ? { 'bypass-tunnel-reminder': 'true' } : {},
 });
 
 // Attach JWT token to every request
