@@ -12,3 +12,7 @@ backend/**/*.pyc
 mobile/node_modules/
 mobile/.expo/
 mobile/dist/
+
+# Generated static files (audio, images)
+backend/static/audio/
+backend/static/images/
