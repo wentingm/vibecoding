@@ -4,6 +4,8 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+import pathlib
 
 from app.core.database import close_mongo_connection, connect_to_mongo
 from app.routers import auth, dashboard, profiles, stories
@@ -54,6 +56,12 @@ app.include_router(auth.router, prefix=API_PREFIX)
 app.include_router(profiles.router, prefix=API_PREFIX)
 app.include_router(stories.router, prefix=API_PREFIX)
 app.include_router(dashboard.router, prefix=API_PREFIX)
+
+# Serve generated audio files
+_static_dir = pathlib.Path(__file__).parent.parent / "static"
+_static_dir.mkdir(exist_ok=True)
+((_static_dir / "audio")).mkdir(exist_ok=True)
+app.mount("/static", StaticFiles(directory=str(_static_dir)), name="static")
 
 
 # ---------------------------------------------------------------------------

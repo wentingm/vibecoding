@@ -9,6 +9,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 10080  # 7 days
     OPENAI_API_KEY: str = ""
     ELEVENLABS_API_KEY: str = ""
+    BASE_URL: str = "http://localhost:8000"
 
     model_config = SettingsConfigDict(env_file=".env")
 

@@ -35,6 +35,8 @@ def _story_doc_to_response(doc: dict) -> StoryResponse:
             text=p["text"],
             illustration_url=p.get("illustration_url"),
             audio_url=p.get("audio_url"),
+            emoji=p.get("emoji"),
+            bg_color=p.get("bg_color"),
         )
         for p in doc.get("pages", [])
     ]
@@ -143,7 +145,9 @@ async def generate_story(
             "page_number": p["page_number"],
             "text": p["text"],
             "illustration_url": None,
-            "audio_url": None,
+            "audio_url": p.get("audio_url"),
+            "emoji": p.get("emoji"),
+            "bg_color": p.get("bg_color"),
         }
         for p in story_data.get("pages", [])
     ]

@@ -15,6 +15,8 @@ class StoryPageResponse(BaseModel):
     text: str
     illustration_url: Optional[str] = None
     audio_url: Optional[str] = None
+    emoji: Optional[str] = None
+    bg_color: Optional[str] = None
 
 
 # ---------------------------------------------------------------------------
