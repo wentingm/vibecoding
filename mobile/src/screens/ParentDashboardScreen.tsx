@@ -23,6 +23,7 @@ type RootStackParamList = {
   ProfileSelect: undefined;
   AddProfile: undefined;
   Login: undefined;
+  VoiceUpload: undefined;
 };
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
@@ -183,7 +184,7 @@ export default function ParentDashboardScreen() {
                 <TouchableOpacity
                   style={styles.manageVoiceButton}
                   activeOpacity={0.8}
-                  onPress={() => {}}
+                  onPress={() => navigation.navigate('VoiceUpload')}
                 >
                   <Text style={styles.manageVoiceText}>🎙 Manage Voices</Text>
                 </TouchableOpacity>

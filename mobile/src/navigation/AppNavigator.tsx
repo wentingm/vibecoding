@@ -15,6 +15,7 @@ import SleepModeScreen from '../screens/SleepModeScreen';
 import ParentPasscodeScreen from '../screens/ParentPasscodeScreen';
 import ParentDashboardScreen from '../screens/ParentDashboardScreen';
 import AddProfileScreen from '../screens/AddProfileScreen';
+import VoiceUploadScreen from '../screens/VoiceUploadScreen';
 import { useAuthStore } from '../store/authStore';
 import { COLORS } from '../constants/theme';
 
@@ -68,6 +69,7 @@ export default function AppNavigator() {
         <Stack.Screen name="ParentPasscode" component={ParentPasscodeScreen} />
         <Stack.Screen name="ParentDashboard" component={ParentDashboardScreen} />
         <Stack.Screen name="AddProfile" component={AddProfileScreen} />
+        <Stack.Screen name="VoiceUpload" component={VoiceUploadScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
