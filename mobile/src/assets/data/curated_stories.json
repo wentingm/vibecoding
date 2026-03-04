@@ -1,0 +1,227 @@
+[
+  {
+    "id": "local_1",
+    "title": "The Dragon Who Couldn't Fly",
+    "theme_tags": ["dragon", "adventure", "friendship"],
+    "duration_seconds": 240,
+    "is_curated": true,
+    "is_ai_generated": false,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "Deep in the Moonberry Mountains lived a small dragon named Ember. While all his dragon friends soared above the clouds, Ember stayed on the ground.",
+        "illustration_url": "",
+        "emoji": "🐉",
+        "bg_color": "#FFB3C6"
+      },
+      {
+        "page_number": 2,
+        "text": "Ember tried and tried to fly, flapping his wings as hard as he could. But every time, he just tumbled gently into a pile of soft purple flowers.",
+        "illustration_url": "",
+        "emoji": "🌸",
+        "bg_color": "#C9B8F0"
+      },
+      {
+        "page_number": 3,
+        "text": "One day, a little bunny named Bea saw Ember looking sad. 'I can't hop as far as other bunnies,' said Bea. 'But I make the best carrot soup!'",
+        "illustration_url": "",
+        "emoji": "🐰",
+        "bg_color": "#F5D76E"
+      },
+      {
+        "page_number": 4,
+        "text": "Ember smiled. He realized that he could breathe the warmest, coziest fire — perfect for keeping all his friends warm on cold nights.",
+        "illustration_url": "",
+        "emoji": "🔥",
+        "bg_color": "#FFD4B8"
+      },
+      {
+        "page_number": 5,
+        "text": "That night, Ember sat with all his friends under the stars, keeping them warm and cozy. He wasn't so different after all — he was just perfectly himself. Goodnight, little dragon.",
+        "illustration_url": "",
+        "emoji": "🌙",
+        "bg_color": "#2D1B69"
+      }
+    ]
+  },
+  {
+    "id": "local_2",
+    "title": "Olivia and the Moonbeam Fairy",
+    "theme_tags": ["fairy", "moon", "magic"],
+    "duration_seconds": 210,
+    "is_curated": true,
+    "is_ai_generated": false,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "On a quiet Tuesday evening, a tiny fairy named Luna appeared on Olivia's windowsill, glowing like a little pearl.",
+        "illustration_url": "",
+        "emoji": "🧚",
+        "bg_color": "#C9B8F0"
+      },
+      {
+        "page_number": 2,
+        "text": "Luna held a small silver wand. 'I carry moonbeams,' she whispered, 'one for every sleeping child who needs a sweet dream.'",
+        "illustration_url": "",
+        "emoji": "🌙",
+        "bg_color": "#A8D8EA"
+      },
+      {
+        "page_number": 3,
+        "text": "She sprinkled a moonbeam over Olivia's pillow — it turned into a soft, glowing cloud that smelled like vanilla and warm blankets.",
+        "illustration_url": "",
+        "emoji": "✨",
+        "bg_color": "#F5D76E"
+      },
+      {
+        "page_number": 4,
+        "text": "'Dream of anywhere you want to go,' said Luna, 'because in dreams, everything is possible.' Olivia felt her eyes grow heavy and warm.",
+        "illustration_url": "",
+        "emoji": "💫",
+        "bg_color": "#FFB3C6"
+      },
+      {
+        "page_number": 5,
+        "text": "Luna flew back to the moon, leaving a trail of soft silver light. Olivia closed her eyes and drifted away to the sweetest adventure. Goodnight, little one.",
+        "illustration_url": "",
+        "emoji": "🌟",
+        "bg_color": "#2D1B69"
+      }
+    ]
+  },
+  {
+    "id": "local_3",
+    "title": "Lucas and the Sleepy Stars",
+    "theme_tags": ["space", "stars", "sleep"],
+    "duration_seconds": 220,
+    "is_curated": true,
+    "is_ai_generated": false,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "Far above the clouds, in the velvet night sky, lived millions of stars — and every night they had one very important job.",
+        "illustration_url": "",
+        "emoji": "🌌",
+        "bg_color": "#2D1B69"
+      },
+      {
+        "page_number": 2,
+        "text": "The stars had to shine brightly until every child on Earth was safely asleep. It was the most important job in the whole universe.",
+        "illustration_url": "",
+        "emoji": "⭐",
+        "bg_color": "#A8D8EA"
+      },
+      {
+        "page_number": 3,
+        "text": "Lucas, a curious little star, peeked down through a telescope cloud and saw a little boy still awake, reading with a flashlight.",
+        "illustration_url": "",
+        "emoji": "🔭",
+        "bg_color": "#C9B8F0"
+      },
+      {
+        "page_number": 4,
+        "text": "'If you go to sleep,' Lucas twinkled in morse code, 'I'll send you the best dream — one with rocket ships and rainbow planets!'",
+        "illustration_url": "",
+        "emoji": "🚀",
+        "bg_color": "#F5D76E"
+      },
+      {
+        "page_number": 5,
+        "text": "The little boy smiled, tucked under his blanket, and closed his eyes. And Lucas the star shone his very brightest, all through the night. Sweet dreams, little astronaut.",
+        "illustration_url": "",
+        "emoji": "🌙",
+        "bg_color": "#2D1B69"
+      }
+    ]
+  },
+  {
+    "id": "local_4",
+    "title": "The Little Ocean Explorer",
+    "theme_tags": ["ocean", "adventure", "animals"],
+    "duration_seconds": 200,
+    "is_curated": true,
+    "is_ai_generated": false,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "Beneath the shimmering waves lived a curious little fish named Pearl. Every day she swam past the same coral reef, wondering what lay beyond the blue horizon.",
+        "illustration_url": "",
+        "emoji": "🐠",
+        "bg_color": "#A8D8EA"
+      },
+      {
+        "page_number": 2,
+        "text": "One morning, Pearl met a wise old sea turtle named Tide. 'I know a place,' said Tide slowly, 'where the coral sings lullabies at night.'",
+        "illustration_url": "",
+        "emoji": "🐢",
+        "bg_color": "#B8F0D4"
+      },
+      {
+        "page_number": 3,
+        "text": "They swam together past glowing jellyfish and sleeping starfish, through tunnels of sea glass that sparkled like underwater stars.",
+        "illustration_url": "",
+        "emoji": "🪸",
+        "bg_color": "#FFB3C6"
+      },
+      {
+        "page_number": 4,
+        "text": "At last they reached the singing coral reef. The soft hum filled the water like a warm hug, and Pearl felt her fins grow still and peaceful.",
+        "illustration_url": "",
+        "emoji": "🎵",
+        "bg_color": "#C9B8F0"
+      },
+      {
+        "page_number": 5,
+        "text": "Pearl curled up in a cozy shell and listened to the coral's gentle song. The whole ocean grew quiet and calm. Goodnight, little explorer.",
+        "illustration_url": "",
+        "emoji": "🌙",
+        "bg_color": "#2D1B69"
+      }
+    ]
+  },
+  {
+    "id": "local_5",
+    "title": "The Magical Forest Nap",
+    "theme_tags": ["forest", "magic", "animals"],
+    "duration_seconds": 180,
+    "is_curated": true,
+    "is_ai_generated": false,
+    "pages": [
+      {
+        "page_number": 1,
+        "text": "In the Whispering Woods, where mushrooms wore tiny hats and fireflies carried lanterns, lived a little fox named Finn.",
+        "illustration_url": "",
+        "emoji": "🦊",
+        "bg_color": "#FFD4B8"
+      },
+      {
+        "page_number": 2,
+        "text": "Finn loved to explore, but one evening he walked so far that he found himself in a clearing he had never seen — filled with the softest, most golden moss.",
+        "illustration_url": "",
+        "emoji": "🌲",
+        "bg_color": "#B8F0D4"
+      },
+      {
+        "page_number": 3,
+        "text": "A wise old owl hooted from above. 'This is the Dreaming Meadow,' she said softly. 'All who rest here have the most wonderful dreams.'",
+        "illustration_url": "",
+        "emoji": "🦉",
+        "bg_color": "#C9B8F0"
+      },
+      {
+        "page_number": 4,
+        "text": "Finn lay down on the golden moss. The fireflies dimmed their lanterns one by one, and the trees began to hum a sleepy, gentle tune.",
+        "illustration_url": "",
+        "emoji": "✨",
+        "bg_color": "#F5D76E"
+      },
+      {
+        "page_number": 5,
+        "text": "Finn closed his bright eyes and dreamed of meadows full of butterflies and warm sunshine. The whole forest breathed slowly with him. Goodnight, little fox.",
+        "illustration_url": "",
+        "emoji": "🌙",
+        "bg_color": "#2D1B69"
+      }
+    ]
+  }
+]
