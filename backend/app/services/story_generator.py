@@ -7,6 +7,7 @@ import re
 import uuid
 from typing import Any
 
+import httpx
 from openai import AsyncOpenAI
 
 from app.core.config import settings
@@ -61,13 +62,35 @@ class StoryGenerator:
         self._client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
 
     async def _generate_audio(self, text: str, filename: str) -> str:
-        """Generate TTS audio for a page and save it. Returns the public URL."""
+        """Generate TTS audio using ElevenLabs (if configured) or OpenAI nova."""
+        filepath = AUDIO_DIR / filename
+
+        if settings.ELEVENLABS_API_KEY and settings.ELEVENLABS_VOICE_ID:
+            try:
+                url = f"https://api.elevenlabs.io/v1/text-to-speech/{settings.ELEVENLABS_VOICE_ID}"
+                headers = {
+                    "xi-api-key": settings.ELEVENLABS_API_KEY,
+                    "Content-Type": "application/json",
+                }
+                payload = {
+                    "text": text,
+                    "model_id": "eleven_multilingual_v2",
+                    "voice_settings": {"stability": 0.75, "similarity_boost": 0.80},
+                }
+                async with httpx.AsyncClient(timeout=30) as client:
+                    resp = await client.post(url, headers=headers, json=payload)
+                    resp.raise_for_status()
+                filepath.write_bytes(resp.content)
+                return f"{settings.BASE_URL}/static/audio/{filename}"
+            except Exception as e:
+                print(f"ElevenLabs failed, falling back to OpenAI TTS: {e}")
+
+        # Fallback: OpenAI nova voice
         response = await self._client.audio.speech.create(
             model="tts-1",
             voice="nova",
             input=text,
         )
-        filepath = AUDIO_DIR / filename
         filepath.write_bytes(response.content)
         return f"{settings.BASE_URL}/static/audio/{filename}"
 

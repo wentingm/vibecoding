@@ -14,6 +14,8 @@ load_dotenv()
 MONGO_URL = os.getenv("MONGODB_URL", "mongodb://localhost:27017")
 DB_NAME = os.getenv("DATABASE_NAME", "bedtime_storyteller")
 OPENAI_KEY = os.getenv("OPENAI_API_KEY")
+ELEVENLABS_KEY = os.getenv("ELEVENLABS_API_KEY", "")
+ELEVENLABS_VOICE_ID = os.getenv("ELEVENLABS_VOICE_ID", "")
 BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
 
 AUDIO_DIR = pathlib.Path("static/audio")
@@ -45,9 +47,24 @@ def pick_emoji_color(themes: list[str]) -> tuple[str, str]:
 
 async def generate_tts(text: str, filename: str) -> str:
     path = AUDIO_DIR / filename
-    if path.exists():
-        print(f"    audio cached: {filename}")
-        return f"{BASE_URL}/static/audio/{filename}"
+    # Don't use cache — always regenerate so voice changes take effect
+    if ELEVENLABS_KEY and ELEVENLABS_VOICE_ID:
+        try:
+            url = f"https://api.elevenlabs.io/v1/text-to-speech/{ELEVENLABS_VOICE_ID}"
+            headers = {"xi-api-key": ELEVENLABS_KEY, "Content-Type": "application/json"}
+            payload = {
+                "text": text,
+                "model_id": "eleven_multilingual_v2",
+                "voice_settings": {"stability": 0.75, "similarity_boost": 0.80},
+            }
+            async with httpx.AsyncClient(timeout=30) as http:
+                resp = await http.post(url, headers=headers, json=payload)
+                resp.raise_for_status()
+            path.write_bytes(resp.content)
+            print(f"    ElevenLabs audio: {filename}")
+            return f"{BASE_URL}/static/audio/{filename}"
+        except Exception as e:
+            print(f"    ElevenLabs failed ({e}), falling back to OpenAI")
     response = await client.audio.speech.create(model="tts-1", voice="nova", input=text)
     path.write_bytes(response.content)
     return f"{BASE_URL}/static/audio/{filename}"
