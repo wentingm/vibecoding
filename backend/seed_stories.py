@@ -287,7 +287,73 @@ CURATED_STORIES = [
     },
 
     # ------------------------------------------------------------------
-    # 5. The Little Ocean Explorer
+    # 5. Lucas, Olivia and the Husky's Magic Trail
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia and the Husky's Magic Trail",
+        "theme_tags": ["adventure", "siblings", "animals", "magic"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "One snowy evening, Lucas and Olivia were playing in the backyard "
+                    "when they heard a soft howl from the woods. "
+                    "Out of the trees trotted a beautiful white husky with bright blue eyes and a fluffy tail that wagged like a flag."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "The husky nudged Lucas's hand with his cold nose, then looked back at the forest. "
+                    "'I think he wants us to follow him!' whispered Olivia, her eyes wide. "
+                    "Lucas took his little sister's hand and together they stepped into the shimmering, snow-covered trees."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "Wherever the husky's paws touched the snow, tiny golden stars appeared. "
+                    "The trail of stars wound through the forest like a glowing river. "
+                    "Lucas and Olivia followed, laughing as snowflakes tickled their noses."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "The trail led to a cosy hollow tree filled with soft moss and warm light. "
+                    "Inside sat a family of sleeping foxes, a snoozing owl, and three tiny rabbits all curled up together. "
+                    "'It's the Dreamtime Den,' Olivia gasped, 'where all the forest animals sleep!'"
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "The husky curled up in the middle of the den and let out a long, happy yawn. "
+                    "Lucas and Olivia snuggled beside him, warm and safe. "
+                    "The golden stars drifted up through the branches and became the very stars in the sky above. "
+                    "And just like that, the two siblings closed their eyes and dreamed of snowy trails and magic paws."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+        ],
+    },
+
+    # ------------------------------------------------------------------
+    # 6. The Little Ocean Explorer
     # ------------------------------------------------------------------
     {
         "title": "The Little Ocean Explorer",

@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 from motor.motor_asyncio import AsyncIOMotorClient
 from openai import AsyncOpenAI
 
-load_dotenv()
+load_dotenv(override=True)
 
 MONGO_URL = os.getenv("MONGODB_URL", "mongodb://localhost:27017")
 DB_NAME = os.getenv("DATABASE_NAME", "bedtime_storyteller")
@@ -65,7 +65,7 @@ async def generate_tts(text: str, filename: str) -> str:
             return f"{BASE_URL}/static/audio/{filename}"
         except Exception as e:
             print(f"    ElevenLabs failed ({e}), falling back to OpenAI")
-    response = await client.audio.speech.create(model="tts-1", voice="nova", input=text)
+    response = await client.audio.speech.create(model="tts-1-hd", voice="onyx", input=text)
     path.write_bytes(response.content)
     return f"{BASE_URL}/static/audio/{filename}"
 
