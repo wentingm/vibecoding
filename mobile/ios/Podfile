@@ -1,0 +1,124 @@
+require File.join(File.dirname(`node --print "require.resolve('expo/package.json')"`), "scripts/autolinking")
+require File.join(File.dirname(`node --print "require.resolve('react-native/package.json')"`), "scripts/react_native_pods")
+
+require 'json'
+podfile_properties = JSON.parse(File.read(File.join(__dir__, 'Podfile.properties.json'))) rescue {}
+
+def ccache_enabled?(podfile_properties)
+  # Environment variable takes precedence
+  return ENV['USE_CCACHE'] == '1' if ENV['USE_CCACHE']
+
+  # Fall back to Podfile properties
+  podfile_properties['apple.ccacheEnabled'] == 'true'
+end
+
+ENV['EX_DEV_CLIENT_NETWORK_INSPECTOR'] ||= podfile_properties['EX_DEV_CLIENT_NETWORK_INSPECTOR']
+ENV['RCT_USE_RN_DEP'] ||= '1' if podfile_properties['ios.buildReactNativeFromSource'] != 'true'
+ENV['RCT_USE_PREBUILT_RNCORE'] ||= '1' if podfile_properties['ios.buildReactNativeFromSource'] != 'true'
+ENV['RCT_HERMES_V1_ENABLED'] ||= '1' if podfile_properties['expo.useHermesV1'] == 'true'
+platform :ios, podfile_properties['ios.deploymentTarget'] || '15.1'
+
+prepare_react_native_project!
+
+target 'BedtimeStories' do
+  use_expo_modules!
+
+  if ENV['EXPO_USE_COMMUNITY_AUTOLINKING'] == '1'
+    config_command = ['node', '-e', "process.argv=['', '', 'config'];require('@react-native-community/cli').run()"];
+  else
+    config_command = [
+      'node',
+      '--no-warnings',
+      '--eval',
+      'require(\'expo/bin/autolinking\')',
+      'expo-modules-autolinking',
+      'react-native-config',
+      '--json',
+      '--platform',
+      'ios'
+    ]
+  end
+
+  config = use_native_modules!(config_command)
+
+  use_frameworks! :linkage => podfile_properties['ios.useFrameworks'].to_sym if podfile_properties['ios.useFrameworks']
+  use_frameworks! :linkage => ENV['USE_FRAMEWORKS'].to_sym if ENV['USE_FRAMEWORKS']
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    :hermes_enabled => podfile_properties['expo.jsEngine'] == nil || podfile_properties['expo.jsEngine'] == 'hermes',
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/..",
+    :privacy_file_aggregation_enabled => podfile_properties['apple.privacyManifestAggregationEnabled'] != 'false',
+  )
+
+  post_install do |installer|
+    react_native_post_install(
+      installer,
+      config[:reactNativePath],
+      :mac_catalyst_enabled => false,
+      :ccache_enabled => ccache_enabled?(podfile_properties),
+    )
+
+    # Compatibility shims for expo-av 16.0.8 with ExpoModulesCore SDK 55
+    # These legacy headers were removed in SDK 55 but expo-av still references them
+    headers_dir = File.join(__dir__, 'Pods/Headers/Public/ExpoModulesCore/ExpoModulesCore')
+
+    File.write(File.join(headers_dir, 'EXEventEmitter.h'), <<~HEADER)
+      // Compatibility shim - EXEventEmitter protocol was removed in SDK 55
+      #import <Foundation/Foundation.h>
+      NS_ASSUME_NONNULL_BEGIN
+      @protocol EXEventEmitter <NSObject>
+      - (NSArray<NSString *> *)supportedEvents;
+      - (void)sendEventWithName:(NSString *)eventName body:(nullable id)body;
+      - (void)startObserving;
+      - (void)stopObserving;
+      @end
+      NS_ASSUME_NONNULL_END
+    HEADER
+
+    File.write(File.join(headers_dir, 'EXEventEmitterService.h'), <<~HEADER)
+      // Compatibility shim - EXEventEmitterService protocol was removed in SDK 55
+      #import <Foundation/Foundation.h>
+      NS_ASSUME_NONNULL_BEGIN
+      @protocol EXEventEmitterService <NSObject>
+      - (void)sendEventWithName:(NSString *)eventName body:(nullable id)body;
+      @end
+      NS_ASSUME_NONNULL_END
+    HEADER
+
+    File.write(File.join(headers_dir, 'EXLegacyExpoViewProtocol.h'), <<~HEADER)
+      // Compatibility shim - EXLegacyExpoViewProtocol was removed in SDK 55
+      #import <Foundation/Foundation.h>
+      NS_ASSUME_NONNULL_BEGIN
+      @protocol EXLegacyExpoViewProtocol <NSObject>
+      @optional
+      - (void)setModuleRegistry:(id)moduleRegistry;
+      @end
+      NS_ASSUME_NONNULL_END
+    HEADER
+
+    # Patch EXDefines.h to add macros and type aliases removed in SDK 55
+    defines_path = File.join(headers_dir, 'EXDefines.h')
+    defines = File.read(defines_path)
+    unless defines.include?('UMPromiseResolveBlock')
+      patch = <<~PATCH
+
+        // Compatibility additions for expo-av (removed in SDK 55)
+        static inline NSError *EXErrorWithMessage(NSString *message) {
+          return [NSError errorWithDomain:@"ExpoModulesCore" code:0 userInfo:@{NSLocalizedDescriptionKey: message}];
+        }
+        static inline void EXFatal(NSError *error) {
+          NSLog(@"[ExpoModulesCore] Fatal: %@", error.localizedDescription);
+        }
+        #define EXLogInfo(fmt, ...)  NSLog((@"[ExpoModulesCore] Info: "  fmt), ##__VA_ARGS__)
+        #define EXLogWarn(fmt, ...)  NSLog((@"[ExpoModulesCore] Warn: "  fmt), ##__VA_ARGS__)
+        #define EXLogError(fmt, ...) NSLog((@"[ExpoModulesCore] Error: " fmt), ##__VA_ARGS__)
+        #define EXLogDebug(fmt, ...) NSLog((@"[ExpoModulesCore] Debug: " fmt), ##__VA_ARGS__)
+        typedef EXPromiseResolveBlock UMPromiseResolveBlock;
+        typedef EXPromiseRejectBlock  UMPromiseRejectBlock;
+      PATCH
+      File.write(defines_path, defines + patch)
+    end
+  end
+end
