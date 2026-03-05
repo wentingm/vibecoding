@@ -105,7 +105,7 @@ export default function StoryPlayerScreen() {
           await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
           const { sound: newSound } = await Audio.Sound.createAsync(
             { uri: audioUrl },
-            { shouldPlay: true }
+            { shouldPlay: true, rate: 0.88, shouldCorrectPitch: true }
           );
           setSound(newSound);
           setIsPlaying(true);

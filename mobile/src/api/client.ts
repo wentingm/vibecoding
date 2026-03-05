@@ -7,6 +7,7 @@ const LOCAL_API  = 'http://10.100.1.95:8000/api/v1';
 const TUNNEL_API = 'https://shy-jokes-rush.loca.lt/api/v1';
 
 const API_URL = Constants.isDevice ? TUNNEL_API : LOCAL_API;
+export const API_BASE_URL = API_URL;
 
 export const apiClient = axios.create({
   baseURL: API_URL,

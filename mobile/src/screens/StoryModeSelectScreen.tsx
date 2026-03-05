@@ -14,6 +14,8 @@ import { COLORS, FONTS, SPACING, RADIUS } from '../constants/theme';
 import { ChildProfile } from '../types';
 import StarBackground from '../components/StarBackground';
 import * as Speech from 'expo-speech';
+import { Audio, isAudioAvailable } from '../hooks/useAudio';
+import { API_BASE_URL } from '../api/client';
 
 const { width } = Dimensions.get('window');
 
@@ -40,13 +42,42 @@ export default function StoryModeSelectScreen() {
   };
 
   useEffect(() => {
-    const greeting = `${getGreeting()}, ${profile.name}! Ready for a bedtime story?`;
-    const timer = setTimeout(() => {
+    let sound: Audio.Sound | null = null;
+
+    const playGreeting = async () => {
+      const timeOfDay = getGreeting().split(' ')[1]; // "morning" | "afternoon" | "evening"
+
+      // Try ElevenLabs greeting via backend
+      if (isAudioAvailable) {
+        try {
+          const res = await fetch(
+            `${API_BASE_URL}/voices/greeting?name=${encodeURIComponent(profile.name)}&time_of_day=${timeOfDay}`
+          );
+          if (res.ok) {
+            const { url } = await res.json();
+            await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
+            const { sound: s } = await Audio.Sound.createAsync(
+              { uri: url },
+              { shouldPlay: true, rate: 0.9, shouldCorrectPitch: true }
+            );
+            sound = s;
+            return;
+          }
+        } catch (e) {
+          console.log('[Greeting] ElevenLabs failed, falling back to Speech:', e);
+        }
+      }
+
+      // Fallback to expo-speech
+      const greeting = `${getGreeting()}, ${profile.name}! Ready for a bedtime story?`;
       Speech.speak(greeting, { rate: 0.78, pitch: 1.0 });
-    }, 400);
+    };
+
+    const timer = setTimeout(playGreeting, 400);
     return () => {
       clearTimeout(timer);
       Speech.stop();
+      sound?.unloadAsync();
     };
   }, []);
 

@@ -1,5 +1,6 @@
 """Voice upload and ElevenLabs voice cloning routes."""
 
+import pathlib
 from typing import Annotated
 
 import httpx
@@ -8,6 +9,9 @@ from motor.motor_asyncio import AsyncIOMotorDatabase
 
 from app.core.config import settings
 from app.core.deps import get_current_user, get_db
+
+AUDIO_DIR = pathlib.Path("static/audio")
+AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 
 router = APIRouter(prefix="/voices", tags=["voices"])
 
@@ -74,3 +78,41 @@ async def get_my_voices(
         "mom_voice_id": current_user.get("mom_voice_id"),
         "dad_voice_id": current_user.get("dad_voice_id"),
     }
+
+
+@router.get("/greeting")
+async def get_greeting(
+    name: str,
+    time_of_day: str = "evening",
+):
+    """Generate and cache a personalized greeting in the cloned voice."""
+    if not settings.ELEVENLABS_API_KEY or not settings.ELEVENLABS_VOICE_ID:
+        raise HTTPException(status_code=503, detail="ElevenLabs not configured.")
+
+    greeting_text = f"Good {time_of_day}, {name}! Ready for a bedtime story?"
+    safe_name = "".join(c for c in name.lower() if c.isalnum())
+    filename = f"greeting_{safe_name}_{time_of_day}.mp3"
+    path = AUDIO_DIR / filename
+
+    # Serve cached file if it exists
+    if path.exists():
+        return {"url": f"{settings.BASE_URL}/static/audio/{filename}"}
+
+    try:
+        url = f"https://api.elevenlabs.io/v1/text-to-speech/{settings.ELEVENLABS_VOICE_ID}"
+        payload = {
+            "text": greeting_text,
+            "model_id": "eleven_multilingual_v2",
+            "voice_settings": {"stability": 0.75, "similarity_boost": 0.80},
+        }
+        async with httpx.AsyncClient(timeout=30) as client:
+            resp = await client.post(
+                url,
+                headers={"xi-api-key": settings.ELEVENLABS_API_KEY, "Content-Type": "application/json"},
+                json=payload,
+            )
+            resp.raise_for_status()
+        path.write_bytes(resp.content)
+        return {"url": f"{settings.BASE_URL}/static/audio/{filename}"}
+    except Exception as e:
+        raise HTTPException(status_code=502, detail=f"Greeting generation failed: {e}")
