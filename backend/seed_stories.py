@@ -416,6 +416,81 @@ CURATED_STORIES = [
             },
         ],
     },
+    # ------------------------------------------------------------------
+    # 7. Lucas and Olivia's Deep Sea Adventure
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas and Olivia's Deep Sea Adventure",
+        "theme_tags": ["ocean", "adventure", "animals", "siblings"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 360,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "One morning Lucas and Olivia found a shimmering submarine at the end of their garden path. "
+                    "It was small and round, with a porthole window and a friendly blinking light on top. "
+                    "'Shall we go in?' whispered Olivia. Lucas grabbed her hand, and together they dove beneath the waves."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "The first friend they met was Bella the blue whale — the biggest, gentlest creature in all the sea. "
+                    "Bella blew a huge, sparkling water spout that caught the sunlight like a rainbow. "
+                    "'Hold on tight!' she rumbled softly, and the children laughed as bubbles swirled all around them."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "Next, Inky the octopus waved all eight arms at once in greeting. "
+                    "He changed colour from purple to pink to gold — just to make Olivia giggle. "
+                    "Then Stella the sea turtle glided past, smooth and slow as a dream, and let them rest on her wide, mossy shell."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "A flash of silver shot through the water — Ziggy the squid zoomed by trailing ribbons of light. "
+                    "And then, very slowly, a great grey shape appeared from the shadows. "
+                    "It was Finn the shark — but he had the kindest eyes Lucas had ever seen, and he bowed his head politely."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "All the sea friends gathered in a circle around the children. "
+                    "The water glowed a soft blue-green, and everything felt peaceful and quiet. "
+                    "Olivia leaned her head on Lucas's shoulder and yawned the tiniest yawn. "
+                    "'Time to go home,' said Stella gently, and the submarine floated them slowly back to shore."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 6,
+                "text": (
+                    "Back in their warm beds, Lucas and Olivia smiled at the ceiling. "
+                    "Outside, the stars shimmered like the lights of Bella, Inky, Stella, Ziggy, and Finn far below. "
+                    "The deep sea was always there — waiting, sparkling, and full of friends — whenever they closed their eyes and dreamed."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+        ],
+    },
 ]
 
 
