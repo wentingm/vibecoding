@@ -75,23 +75,40 @@ async def generate_image(text: str, title: str, filename: str) -> str:
     if path.exists():
         print(f"    image cached: {filename}")
         return f"{BASE_URL}/static/images/{filename}"
-    prompt = (
-        f"A gentle children's book illustration in soft watercolor style, "
-        f"warm pastel colors, dreamy and calming, suitable for bedtime, ages 3-7. "
-        f"Scene: {text[:200]}. No text or letters in the image."
-    )
-    response = await client.images.generate(
-        model="dall-e-3",
-        prompt=prompt,
-        size="1024x1024",
-        quality="standard",
-        n=1,
-    )
-    image_url = response.data[0].url
-    async with httpx.AsyncClient(timeout=30) as http:
-        img_resp = await http.get(image_url)
-    path.write_bytes(img_resp.content)
-    return f"{BASE_URL}/static/images/{filename}"
+
+    prompts = [
+        (
+            f"A gentle children's book illustration in soft watercolor style, "
+            f"warm pastel colors, dreamy and calming, suitable for bedtime, ages 3-7. "
+            f"Scene: {text[:180]}. No text or letters in the image."
+        ),
+        (
+            f"A soft watercolor children's book scene from the story '{title}'. "
+            f"Warm pastel colors, cosy and magical, bedtime atmosphere. "
+            f"No text or letters in the image."
+        ),
+    ]
+
+    for prompt in prompts:
+        try:
+            response = await client.images.generate(
+                model="dall-e-3",
+                prompt=prompt,
+                size="1024x1024",
+                quality="standard",
+                n=1,
+            )
+            image_url = response.data[0].url
+            async with httpx.AsyncClient(timeout=30) as http:
+                img_resp = await http.get(image_url)
+            path.write_bytes(img_resp.content)
+            return f"{BASE_URL}/static/images/{filename}"
+        except Exception as e:
+            print(f"    image prompt failed ({e}), trying fallback...")
+            continue
+
+    print(f"    ⚠️  all image prompts failed, skipping image")
+    return ""
 
 
 async def enrich_story(db, story: dict):

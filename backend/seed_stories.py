@@ -491,6 +491,335 @@ CURATED_STORIES = [
             },
         ],
     },
+
+    # ------------------------------------------------------------------
+    # 8. Lucas and Olivia and the Dinosaur Valley
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas and Olivia and the Dinosaur Valley",
+        "theme_tags": ["dinosaurs", "adventure", "siblings", "magic"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "Lucas found an old golden compass under his pillow one night. "
+                    "When he held it up, it spun wildly and a warm light poured from the window — pointing toward a misty valley neither child had ever seen. "
+                    "Olivia pulled on her boots. 'Let's go,' she said, and they ran."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "The valley was lush and green, with giant ferns as tall as houses. "
+                    "A small Triceratops with three wobbly horns waddled up and sniffed Olivia's hand. "
+                    "'His name is Bumble,' said a voice — it was a tiny girl dinosaur in a flower crown who spoke perfect English and seemed very pleased to have visitors."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "Bumble led them to a wide, warm lake where a family of Brachiosaurus dipped their long necks to drink. "
+                    "Lucas climbed onto Bumble's back and Olivia rode a friendly Ankylosaurus named Plum, whose armoured tail wagged like a dog's. "
+                    "They rumbled happily through the valley as fireflies lit the fern tops gold."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "As the twin moons of Dinosaur Valley rose, the creatures all gathered in a great circle and hummed a low, rumbling lullaby. "
+                    "The ground vibrated softly beneath the children's feet — a sound like a heartbeat, warm and steady. "
+                    "Olivia closed her eyes and smiled. 'It feels like a hug,' she said."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "The compass glowed again, gently pulling them home. "
+                    "Bumble pressed his great head against Lucas's chest for a long moment, then stepped back and blinked his big brown eyes slowly — which is how dinosaurs say goodnight. "
+                    "Lucas and Olivia tiptoed back to bed, still warm from the valley's lullaby, and were asleep before they knew it."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+        ],
+    },
+
+    # ------------------------------------------------------------------
+    # 9. Lucas, Olivia and the Meadow of Sleepy Rabbits
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia and the Meadow of Sleepy Rabbits",
+        "theme_tags": ["rabbits", "nature", "siblings", "sleep"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 270,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "One spring evening, a white rabbit with a daisy behind her ear hopped to the children's window and tapped three times. "
+                    "'My name is Clover,' she said. 'Our meadow needs two good helpers before bedtime — will you come?' "
+                    "Lucas and Olivia were already in their pyjamas. They hopped right out after her."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "The meadow was silver in the moonlight, dotted with hundreds of tiny rabbits who had forgotten how to fall asleep. "
+                    "Some were bouncing. Some were nibbling clover. Some were just looking at the sky with wide, worried eyes. "
+                    "'We need a bedtime song,' said Clover. 'But none of us can remember the tune.'"
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "Olivia began to hum a soft tune — slow and gentle as a rocking boat. "
+                    "One by one the rabbits stopped bouncing and sat very still, ears drooping with sleepiness. "
+                    "Lucas gently tucked dandelion-fluff blankets around the tiniest ones, who were already nose-deep in the grass."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "Soon every single rabbit in the meadow was curled in a soft ball, breathing slowly and dreaming of carrots and sunshine. "
+                    "Clover sat between Lucas and Olivia and let out a long, happy sigh. "
+                    "'You did it,' she whispered. 'The meadow thanks you.'"
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "Clover led them back to their window and pressed a tiny warm pebble into each of their hands — the rabbits' gift for the kindest helpers. "
+                    "That night Lucas and Olivia held their pebbles and felt the same gentle warmth as the meadow. "
+                    "They closed their eyes, and the soft tune Olivia had hummed floated them right into the most peaceful dream."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+        ],
+    },
+
+    # ------------------------------------------------------------------
+    # 10. The Snowman Who Needed a Name
+    # ------------------------------------------------------------------
+    {
+        "title": "The Snowman Who Needed a Name",
+        "theme_tags": ["snowman", "winter", "siblings", "magic"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 270,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "After a big snowfall, Lucas and Olivia built the finest snowman the garden had ever seen. "
+                    "They gave him a carrot nose, two pinecone eyes, and a bright red scarf. "
+                    "Then — just as they were about to go inside — the snowman blinked and said, very quietly, 'Hello.'"
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "'I've been waiting all winter for someone to make me,' said the snowman with a happy wobble. "
+                    "'But I don't have a name. Could you help?' "
+                    "Lucas and Olivia looked at each other. This was the most important job they had ever been given."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "They thought of names for a whole hour: Fluffy, Blizzard, Captain Carrot, Sir Snowsworth. "
+                    "The snowman giggled at each one — a sound like sleigh bells — but shook his round head. "
+                    "Then Olivia looked at his kind pinecone eyes and whispered, 'What about Cozy?' "
+                    "The snowman went very still — and then glowed from inside like a warm lamp."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "'Cozy,' he repeated slowly, trying it out. 'Yes. That's exactly right.' "
+                    "He told the children that now that he had a name, he would guard the garden every night while they slept. "
+                    "He would watch the stars, hum to the snowflakes, and make sure nothing woke them till morning."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "That night, from their warm beds, Lucas and Olivia peeked through the frosted window. "
+                    "Cozy stood in the garden, softly glowing, snowflakes drifting around him like tiny dancing stars. "
+                    "He turned and gave them a slow, gentle wave. "
+                    "They waved back, pulled their blankets up, and fell into the deepest, coziest sleep of their lives."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+        ],
+    },
+
+    # ------------------------------------------------------------------
+    # 11. Happy, Wangcai and the Midnight Walk
+    # ------------------------------------------------------------------
+    {
+        "title": "Happy, Wangcai and the Midnight Walk",
+        "theme_tags": ["dogs", "night", "siblings", "friendship"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 270,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "Lucas and Olivia had two dogs: Happy, a fluffy golden dog who wagged his tail so fast it looked like wings, "
+                    "and Wangcai, a chunky brown dog with a big round belly and a very dignified walk. "
+                    "One night, both dogs put their paws on the children's beds and stared at them with wide, serious eyes."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "Happy barked once — soft, like a question. Wangcai sat very still, which meant something important. "
+                    "'They want to show us something,' said Olivia. "
+                    "The four of them tiptoed out into the moonlit garden, Happy bouncing and Wangcai waddling with great purpose."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "Happy led them to the old apple tree where a family of hedgehogs had made their bed among the roots. "
+                    "Wangcai sat down beside them like a round, warm guard and let out a long, satisfied sigh. "
+                    "The hedgehogs didn't stir — they had been sleeping soundly because Wangcai watched over them every night."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "Happy curled around Lucas and Olivia to keep them warm, his golden fur soft as a cloud. "
+                    "Above them, the stars were very bright and the air smelled of apple blossom and fresh grass. "
+                    "'This is the best secret in the whole garden,' whispered Lucas."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "One by one, they all walked back inside — Happy skipping, Wangcai waddling, the children yawning. "
+                    "Both dogs curled at the foot of the beds, one on each side, warm and steady as two small suns. "
+                    "Lucas and Olivia fell asleep listening to the quiet sound of their dogs breathing — the most comforting sound in the world."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+        ],
+    },
+
+    # ------------------------------------------------------------------
+    # 12. Lucas, Olivia and the Paw Patrol to the Rescue
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia and the Paw Patrol to the Rescue",
+        "theme_tags": ["paw patrol", "adventure", "siblings", "dogs"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "Lucas and Olivia were hiking up Sunset Hill when a big purple cloud rolled in and the trail lights flickered off. "
+                    "Then they heard it — a familiar bark, and a flash of red and blue lights below. "
+                    "The Paw Patrol Lookout was parked right at the base of the hill, and Ryder's voice called out: 'No job is too big, no pup is too small!'"
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "Chase zoomed up in his police cruiser, ears perked, tail wagging. "
+                    "'Don't worry, Lucas — I'll light the path!' He switched on his police lights and the whole trail glowed safe and bright. "
+                    "Skye swooped overhead in her helicopter, dropping a map and a gentle shower of sparkles that made Olivia laugh."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "Marshall raced up with his fire truck, carrying hot cocoa in a thermos. "
+                    "Rubble drove his bulldozer to clear a cosy flat spot for everyone to sit. "
+                    "Rocky arrived last with his recycling truck, pulling out soft blankets he had found and folded perfectly. "
+                    "'Every pup does their part!' said Ryder proudly."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "All the pups and the two children sat together under the clearing sky, wrapped in blankets, sharing cocoa. "
+                    "Zuma counted shooting stars and Everest spotted a constellation shaped like a paw print. "
+                    "'That one's ours,' said Chase, and his tail wagged so hard the blanket slid off his back."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "When the children's eyes grew heavy, Skye's helicopter gently lifted them and carried them home — so smoothly they didn't even wake. "
+                    "Ryder tucked them in and Chase sat beside the bed until their breathing was slow and deep. "
+                    "'Mission complete,' Ryder whispered with a smile. "
+                    "And every pup gave one last quiet bark — goodnight."
+                ),
+                "illustration_url": None,
+                "audio_url": None,
+            },
+        ],
+    },
 ]
 
 
