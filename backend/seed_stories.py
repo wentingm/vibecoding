@@ -820,6 +820,750 @@ CURATED_STORIES = [
             },
         ],
     },
+    # ------------------------------------------------------------------
+    # 13. The Rainbow Bridge
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy and the Rainbow Bridge",
+        "theme_tags": ["adventure", "unicorn", "animals", "friendship"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "One sunny afternoon, Lucas, Olivia, and their dog Happy were playing in the garden. "
+                    "Suddenly Olivia's unicorn, Sparkle, galloped over with her mane shimmering like moonlight. "
+                    "'Come quickly!' Sparkle cried. 'A rainbow bridge has appeared over Bluebell Hill!'"
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "Happy bounded ahead, his golden tail wagging like a flag in the wind. "
+                    "Lucas ran to keep up, and Olivia held on to Sparkle's silky mane as they trotted up the hill. "
+                    "When they reached the top, a glittering bridge of red, orange, yellow, green, blue, and violet stretched across the sky."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "At the foot of the bridge sat a tiny cloud-bunny with fluffy white ears and worried eyes. "
+                    "'My cloud castle blew away,' the bunny sniffled. 'I can't find my way home.' "
+                    "Happy gently licked the bunny's cheek, and the bunny giggled at last."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "Sparkle knelt so the cloud-bunny could climb onto her back. "
+                    "Together the four friends — Lucas, Olivia, Happy, and Sparkle — walked across the shimmering rainbow bridge. "
+                    "The colours hummed softly like a lullaby under their feet."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "At the other end floated a fluffy white castle made of clouds. "
+                    "The cloud-bunny leapt off Sparkle's back and hugged every one of them. "
+                    "'Thank you, dear friends! You will always have a home here in the sky.' "
+                    "Happy barked happily, and the castle filled with soft golden light."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 6,
+                "text": (
+                    "As the sun dipped low and painted the sky pink, the friends walked home across the rainbow. "
+                    "Lucas held Olivia's hand, Happy trotted beside them, and Sparkle hummed a gentle tune. "
+                    "By the time they reached their garden, they were yawning and their eyes were drooping with lovely, happy dreams."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 14. The Hidden Treasure Map
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy and the Hidden Treasure Map",
+        "theme_tags": ["adventure", "treasure", "animals", "unicorn"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "Happy was digging in the garden — as dogs do — when his paw hit something hard. "
+                    "He barked until Lucas and Olivia came running. "
+                    "There in the dirt was an old rolled-up map tied with a golden ribbon."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "Olivia unrolled the map carefully. It showed a winding path through the Whispering Woods "
+                    "that led to a big red X near the old oak tree. "
+                    "'Treasure!' Lucas shouted, already pulling on his boots."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "Sparkle the unicorn used her glowing horn to light the way as they entered the Whispering Woods. "
+                    "The trees swayed hello and fireflies blinked like tiny lanterns all around them. "
+                    "Happy's nose twitched — he could already smell something wonderful."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "They crossed a mossy bridge, climbed a gentle hill, and found the ancient oak tree. "
+                    "Happy dug eagerly while Lucas and Olivia held the map. "
+                    "Soon his paws hit a wooden chest with a shiny brass latch."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "Inside the chest were four things: a sparkling star for Olivia, "
+                    "a tiny compass for Lucas, a jingle-bell collar for Happy, "
+                    "and a flower-crown that fit perfectly on Sparkle's horn. "
+                    "'The treasure knew exactly what we each needed!' Olivia laughed."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 6,
+                "text": (
+                    "They walked home through the moonlit woods, Happy's new bell jingling softly with every step. "
+                    "Olivia held her star up to the sky and it glowed right back at the real stars above. "
+                    "Lucas whispered, 'Best adventure ever,' and Happy and Sparkle agreed with a bark and a gentle whinny."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 15. The Storm That Turned Into a Song
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy and the Storm That Turned Into a Song",
+        "theme_tags": ["adventure", "unicorn", "animals", "stars"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "A big grey cloud rolled over the meadow and thunder rumbled like a tummy growl. "
+                    "Happy hid under the picnic blanket and peeked out with one eye. "
+                    "'Don't worry, Happy,' said Lucas, snuggling close. 'We'll figure this out together.'"
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "Sparkle stepped forward and touched her glowing horn to the dark cloud. "
+                    "The cloud trembled and let out a long, low note — like a sad song that had never been sung. "
+                    "'The cloud is lonely,' Olivia said softly. 'It just wants someone to listen.'"
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "So Olivia began to hum, and Lucas tapped a rhythm on the picnic basket. "
+                    "Happy howled a happy howl that bounced off the hills. "
+                    "The cloud's thunder turned softer, then gentler, and little raindrops fell like a slow, steady drum."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "The raindrops became part of the song, tip-tapping on the leaves above them. "
+                    "Sparkle swayed her silver mane in time. "
+                    "The big grey cloud began to glow pink and gold at its edges, joining in at last."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "When the song ended, the cloud drifted away smiling, leaving a glittering rainbow behind it. "
+                    "Happy shook the last drops from his fluffy ears and barked cheerfully. "
+                    "The sun came back, warm and golden, and dried every bit of the meadow."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 6,
+                "text": (
+                    "That night, Lucas and Olivia lay on the soft grass and counted the stars appearing one by one. "
+                    "Happy curled up between them, and Sparkle stood close, her horn glowing like a soft nightlight. "
+                    "The sky hummed the cloud's song back to them very, very quietly, and they drifted off to sleep."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 16. The Cloud-Painting Competition
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy and the Cloud-Painting Competition",
+        "theme_tags": ["adventure", "unicorn", "animals", "stars"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "High above the meadow, the Cloud-Painters were getting ready for their yearly competition. "
+                    "Each team had to paint the most beautiful sunset cloud before the moon arrived. "
+                    "A small cloud messenger floated down and invited Lucas, Olivia, Happy, and Sparkle to join."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "Sparkle carried them all up on her back, galloping right into the sky. "
+                    "The clouds were soft and bouncy under their feet, like the world's fluffiest trampoline. "
+                    "Happy rolled around in a fluffy cloud-pile while Lucas and Olivia chose their rainbow paint-pots."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "Lucas painted a giant golden sun sinking slowly into a pink sea. "
+                    "Olivia added purple mountains and a tiny unicorn silhouette on top. "
+                    "Happy dipped his paw in orange paint and added pawprint stamps all along the bottom, which made everyone laugh."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "Sparkle touched her horn to the cloud-painting and it began to shimmer and glow. "
+                    "The colours swirled and sparkled, and tiny stars appeared inside it all by themselves. "
+                    "The other Cloud-Painters gasped with wonder."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "When the moon arrived to judge, she looked at every painting very carefully. "
+                    "Then she smiled her crescent smile and said, 'This one — with the pawprints and the stars — warms my heart the most.' "
+                    "Happy barked proudly and did a little spin."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 6,
+                "text": (
+                    "The moon hung their painting right in the evening sky for everyone below to see. "
+                    "Sparkle glided them gently back down to their garden as the stars came out one by one. "
+                    "Lucas, Olivia, and Happy looked up at their glowing cloud-painting and felt perfectly, completely happy."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 17. The Tiny Island in the Bathtub Sea
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy and the Tiny Island in the Bathtub Sea",
+        "theme_tags": ["adventure", "ocean", "unicorn", "animals"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "One rainy afternoon, Lucas filled the bathtub to the very brim and declared it the Bathtub Sea. "
+                    "Olivia placed their toy boat in the water and named it the S.S. Sparkle. "
+                    "Happy sat on the bathmat as captain, wearing a paper hat Lucas had folded for him."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "Then something magical happened — Sparkle the unicorn shrank to the size of a rubber duck "
+                    "and stepped right onto the boat! "
+                    "'The Bathtub Sea is real today,' she said in a tiny, silvery voice. 'Sail to the island at the far end!'"
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "They sailed past a bubble-reef full of tiny soap-fish that blew shimmering bubbles into the air. "
+                    "Happy paddled alongside the boat, his tail acting as the rudder. "
+                    "The rubber-duck fleet honked a friendly greeting as they passed."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "At the far end of the bathtub stood a tiny island made of a washcloth and three stacked soap bars. "
+                    "A family of bath-toy animals lived there: a pink elephant, a green frog, and a yellow giraffe. "
+                    "'Welcome, explorers!' they cheered."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "The bath-toy animals had built a whole little village with toothpaste towers and shampoo-bottle lighthouses. "
+                    "They shared a feast of foam-strawberries and bubble-grapes. "
+                    "Happy ate three helpings and licked his nose clean."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 6,
+                "text": (
+                    "When the water began to cool, Sparkle grew back to her full size and gently lifted Lucas and Olivia out. "
+                    "Happy shook the water from his fur and curled up on the warm towel. "
+                    "As they drifted off to sleep, they could still hear the tiny lighthouse sending its soft, blinking light into the dark."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 18. The Mountain of a Thousand Echoes
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy and the Mountain of a Thousand Echoes",
+        "theme_tags": ["adventure", "forest", "unicorn", "animals"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "On a clear morning, Sparkle noticed a tall mountain in the distance that hadn't been there the day before. "
+                    "'That's the Mountain of a Thousand Echoes,' she said. 'It only appears once a year, and today is the day.' "
+                    "Lucas grabbed his backpack, Olivia tucked a sandwich inside, and Happy wagged his tail three times fast."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "The mountain was covered in soft purple heather that hummed when you walked through it. "
+                    "Every sound they made — a laugh, a bark, a clip of Sparkle's hooves — bounced back from the rocks in a beautiful echo. "
+                    "Happy barked and heard himself bark back nine times, getting quieter and sweeter each time."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "Near the middle of the mountain, they found a cave where all the echoes gathered and lived. "
+                    "The echoes floated like little bubbles of sound, each one holding a laugh or a word from someone long ago. "
+                    "'Listen,' Olivia whispered. 'I can hear a lullaby.'"
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "The lullaby was old and soft, sung by someone who loved their children very much. "
+                    "Sparkle hummed along, and her magic made the echoes glow gold and float up through the cave roof like fireflies. "
+                    "Lucas and Olivia held hands and listened until the song was done."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "At the very top of the mountain was a glass bowl where new echoes could be left forever. "
+                    "Lucas sang a joke. Olivia whispered 'I love you.' Happy howled his best howl. "
+                    "Sparkle added a single clear note that rang like a silver bell."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 6,
+                "text": (
+                    "They made their way back down as the mountain began to fade softly into the evening mist. "
+                    "Happy walked slowly now, pleasantly tired, his ears drooping in the nicest way. "
+                    "That night, Lucas and Olivia fell asleep to the faint sound of their own echoes floating back to them on the breeze."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 19. The Night Market in the Garden
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy and the Night Market in the Garden",
+        "theme_tags": ["adventure", "stars", "unicorn", "animals"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "One evening, tiny lanterns appeared all over the garden — red, gold, blue, and green. "
+                    "Lucas pressed his nose to the window. 'There's a market out there!' "
+                    "Olivia grabbed Sparkle's mane, Happy pressed his nose to the glass beside Lucas, and they all hurried outside."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "The Night Market was run by garden creatures: hedgehogs selling dewdrop lemonade, "
+                    "fireflies offering jars of their own gentle light, "
+                    "and a wise old tortoise who traded riddles for moonstone pebbles."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "Happy traded a friendly lick for a hedgehog biscuit shaped like a bone. "
+                    "Lucas answered the tortoise's riddle — 'What has hands but no arms? A clock!' — and won two moonstones. "
+                    "Olivia bought a firefly lantern that blinked in time with her heartbeat."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "Sparkle's favourite stall was the flower-crown weaver, a tiny spider who worked with moonbeam thread. "
+                    "She wove a crown of lavender and silver stars for Sparkle's horn in less than a minute. "
+                    "It glimmered so beautifully that all the fireflies gathered around to admire it."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "As the market began to pack away, the tortoise gathered everyone for a last dance. "
+                    "The fireflies hummed a waltz, the hedgehogs tapped their tiny feet, and even the moonflowers swayed. "
+                    "Lucas and Olivia danced together, laughing, while Happy spun in happy circles."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 6,
+                "text": (
+                    "By the time the last lantern went out, Lucas and Olivia could barely keep their eyes open. "
+                    "Sparkle carried them gently to the back door, and Happy led the way up the stairs. "
+                    "Olivia's firefly lantern blinked softly on the bedside table, a tiny light guarding them all through the night."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 20. The Frozen Lake and the Ice Sprites
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy and the Frozen Lake and the Ice Sprites",
+        "theme_tags": ["adventure", "stars", "unicorn", "animals"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "Winter had arrived in the night, and by morning the little pond at the bottom of the garden "
+                    "had frozen into a perfect mirror of ice. "
+                    "Lucas slid across it first, spinning like a top. Happy ran after him and slid much, much further, crashing gently into a snowdrift."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "Sparkle stepped onto the ice very carefully, and where her hooves touched, "
+                    "tiny flowers of frost bloomed in the most beautiful patterns. "
+                    "Olivia knelt to look closely and found tiny creatures living inside the frost flowers — Ice Sprites, no bigger than a thumb."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "The Ice Sprites were building a tiny city under the ice, "
+                    "with crystal towers and bridges made of frozen droplets. "
+                    "'We only have until the sun gets too warm,' the smallest sprite said. "
+                    "'Please help us finish before we melt away!'"
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "Sparkle used her magic to keep the ice perfectly cold. "
+                    "Happy used his big gentle paws to carefully push snowflakes into the right shape. "
+                    "Lucas and Olivia used their fingers to press tiny windows into the crystal towers."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "By midday the ice city was finished, gleaming and sparkling under the winter sun. "
+                    "All the Ice Sprites cheered a tiny cheer that sounded like the tinkling of small bells. "
+                    "They gave each friend a gift: a snowflake that would never melt, kept safe in a little glass bottle."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 6,
+                "text": (
+                    "That evening, the four friends sat by the fire with warm cocoa and looked at their snowflakes glowing softly in the firelight. "
+                    "Happy leaned his head against Lucas's leg and sighed a long, cosy sigh. "
+                    "Olivia placed her snowflake beside her pillow, and as the fire crackled low, they all fell fast asleep."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 21. The Library at the End of the Garden
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy and the Library at the End of the Garden",
+        "theme_tags": ["adventure", "forest", "unicorn", "animals"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "One afternoon, Happy started digging at the very end of the garden — further than he had ever dug before. "
+                    "He disappeared into the hole, then poked his head back up with a look of pure amazement. "
+                    "Lucas and Olivia followed him in and found themselves inside a cosy underground library lit by glowing mushrooms."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "The shelves went up and up and up, higher than they could see, filled with books of every colour. "
+                    "Sparkle — who had shrunk to fit through the tunnel — ran her horn along the spines "
+                    "and each book hummed the first line of its story aloud."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "A mole with round gold spectacles was the librarian. "
+                    "'You may each borrow one story to dream tonight,' she said with a warm smile. "
+                    "Lucas chose a story about rockets. Olivia chose a story about a princess who fixed machines. "
+                    "Happy chose a story about a dog who baked cakes — of course."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "The mole-librarian showed them the Reading Nook, a hollow tree-root lined with the softest moss. "
+                    "Sparkle read all three stories aloud in her gentle voice while the mushrooms glowed warmer and warmer. "
+                    "Happy rested his chin on Lucas's knee and listened with his eyes half-closed."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "When the stories were finished, the books tucked themselves neatly back onto their shelves. "
+                    "The mole-librarian stamped a tiny star on each of their hands — the library's way of saying 'come back soon.' "
+                    "Happy's stamp was on his paw, and he kept sniffing it the whole way home."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 6,
+                "text": (
+                    "Back in their beds, Lucas dreamed of racing among the stars, and Olivia dreamed of her princess fixing a golden clock. "
+                    "Happy dreamed of a cake shaped like a bone covered in gravy icing. "
+                    "And somewhere deep in the garden, the library glowed on quietly, waiting for them to return."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 22. The Balloon That Flew to the Moon
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy and the Balloon That Flew to the Moon",
+        "theme_tags": ["adventure", "space", "unicorn", "animals", "stars"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {
+                "page_number": 1,
+                "text": (
+                    "A giant silver balloon appeared in the garden, tied to the garden gate with a ribbon of starlight. "
+                    "A note said: 'For brave explorers only. Seats: four.' "
+                    "Lucas read it twice, Olivia clapped her hands, Happy pressed his paws on the side of the basket, and Sparkle arched her neck in excitement."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 2,
+                "text": (
+                    "The balloon lifted off gently, carried by a warm, rose-scented breeze. "
+                    "Below them the garden grew smaller, then the town, then the whole country. "
+                    "Happy pressed his nose to the edge of the basket and sniffed the clouds — they smelled like fresh cotton and rain."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 3,
+                "text": (
+                    "They floated past a flock of moon-birds — white birds with feathers that caught the starlight. "
+                    "The birds sang as they flew alongside, a soft travelling-song that made the basket feel warm and safe. "
+                    "Sparkle sang back, and the moon-birds swooped in delight."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 4,
+                "text": (
+                    "The Moon herself was waiting when they arrived — large and round and gently glowing. "
+                    "She had set out a table of moonberry pie and silver-milk, and she smiled as they stepped out of the basket. "
+                    "'I always hoped someone would come for supper,' she said."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 5,
+                "text": (
+                    "They ate and talked and laughed with the Moon as the stars came out one by one around them. "
+                    "Happy fell asleep under the table with a moonberry on his nose. "
+                    "The Moon covered him with a cloud-blanket and whispered, 'Sleep well, brave dog.'"
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+            {
+                "page_number": 6,
+                "text": (
+                    "The balloon carried them home just as dawn was painting the sky the palest pink. "
+                    "Lucas and Olivia were back in their beds before the alarm clock even thought about ringing. "
+                    "Happy curled up at the foot of the bed, and Sparkle stood by the window, watching the Moon fade gently into the morning light."
+                ),
+                "illustration_url": "",
+                "audio_url": None,
+            },
+        ],
+    },
 ]
 
 
