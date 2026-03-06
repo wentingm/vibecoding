@@ -70,6 +70,22 @@ export default function StoryPlayerScreen() {
   const fadeAnim = useRef(new Animated.Value(1)).current;
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  // Ken Burns parallax
+  const kbScale = useRef(new Animated.Value(1)).current;
+  const kbX     = useRef(new Animated.Value(0)).current;
+  const kbY     = useRef(new Animated.Value(0)).current;
+  const kbAnim  = useRef<Animated.CompositeAnimation | null>(null);
+
+  // Ken Burns directions cycle — zoom + slow drift in alternating directions
+  const KB_DIRECTIONS = [
+    { x: 12, y: 6  },
+    { x: -12, y: -6 },
+    { x: 6,  y: -12 },
+    { x: -6, y: 12  },
+    { x: 0,  y: -14 },
+    { x: 0,  y: 14  },
+  ];
+
   const currentPage = story.pages[currentPageIndex];
   const totalPages = story.pages.length;
   const isLastPage = currentPageIndex === totalPages - 1;
@@ -85,6 +101,23 @@ export default function StoryPlayerScreen() {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [sound]);
+
+  // Ken Burns animation — restart on every page change
+  useEffect(() => {
+    if (kbAnim.current) kbAnim.current.stop();
+    kbScale.setValue(1);
+    kbX.setValue(0);
+    kbY.setValue(0);
+
+    const dir = KB_DIRECTIONS[currentPageIndex % KB_DIRECTIONS.length];
+    kbAnim.current = Animated.parallel([
+      Animated.timing(kbScale, { toValue: 1.14, duration: 22000, useNativeDriver: true }),
+      Animated.timing(kbX,     { toValue: dir.x, duration: 22000, useNativeDriver: true }),
+      Animated.timing(kbY,     { toValue: dir.y, duration: 22000, useNativeDriver: true }),
+    ]);
+    kbAnim.current.start();
+    return () => { kbAnim.current?.stop(); };
+  }, [currentPageIndex]);
 
   // Play audio or TTS for the current page
   useEffect(() => {
@@ -275,11 +308,18 @@ export default function StoryPlayerScreen() {
           {/* Illustration panel */}
           <View style={styles.illustrationPanel}>
             {currentPage?.illustration_url ? (
-              <Image
-                source={{ uri: currentPage.illustration_url }}
-                style={styles.illustrationImage}
-                resizeMode="cover"
-              />
+              <Animated.View
+                style={[
+                  styles.parallaxWrapper,
+                  { transform: [{ scale: kbScale }, { translateX: kbX }, { translateY: kbY }] },
+                ]}
+              >
+                <Image
+                  source={{ uri: currentPage.illustration_url }}
+                  style={styles.illustrationImage}
+                  resizeMode="cover"
+                />
+              </Animated.View>
             ) : (
               <Text style={styles.illustrationEmoji}>{pageEmoji}</Text>
             )}
@@ -396,11 +436,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative',
+    overflow: 'hidden',
+  },
+  parallaxWrapper: {
+    width: '100%',
+    height: '100%',
   },
   illustrationImage: {
     width: '100%',
     height: '100%',
-    borderRadius: 0,
   },
   illustrationEmoji: {
     fontSize: 120,
