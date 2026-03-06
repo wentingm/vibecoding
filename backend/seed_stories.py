@@ -1564,6 +1564,206 @@ CURATED_STORIES = [
             },
         ],
     },
+    # ------------------------------------------------------------------
+    # 23. Peppa Pig
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy, Rabbit and Peppa's Muddy Puddle Day",
+        "theme_tags": ["animals", "adventure", "friendship"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 240,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {"page_number": 1, "text": "Lucas, Olivia, Happy the dog, and their little rabbit Clover went to the park. They found Peppa Pig and her little brother George jumping in muddy puddles. 'Come in!' said Peppa. 'Muddy puddles are the best!'", "illustration_url": "", "audio_url": None},
+            {"page_number": 2, "text": "Happy jumped in first — SPLASH! Mud went everywhere. Clover the rabbit hopped in next, her long ears flopping. George squealed with joy and jumped in with both feet.", "illustration_url": "", "audio_url": None},
+            {"page_number": 3, "text": "Lucas tried the biggest puddle. SPLOSH! Mud flew up to his nose. Olivia laughed so hard she fell right in too. Everyone was brown from head to toe.", "illustration_url": "", "audio_url": None},
+            {"page_number": 4, "text": "Peppa's daddy came with a big hose. He washed everyone clean while they giggled and squealed. Happy shook himself dry and got everyone wet all over again.", "illustration_url": "", "audio_url": None},
+            {"page_number": 5, "text": "They all sat on the grass and ate muddy-puddle-shaped biscuits Peppa had brought. Clover got extra carrots. Happy got a big dog biscuit. Everyone had the muddiest, happiest day.", "illustration_url": "", "audio_url": None},
+            {"page_number": 6, "text": "On the way home, Lucas said, 'That was the best puddle day ever.' Olivia nodded. Happy wagged. Clover closed her eyes. They were home and in bed before the mud had even dried on their boots.", "illustration_url": "", "audio_url": None},
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 24. Bluey
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy, Rabbit and a Game with Bluey",
+        "theme_tags": ["animals", "adventure", "friendship"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 240,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {"page_number": 1, "text": "Bluey the blue heeler puppy knocked on the door. 'Want to play Calypso?' she said. Lucas and Olivia said yes right away. Happy barked and Clover the rabbit bounced with excitement.", "illustration_url": "", "audio_url": None},
+            {"page_number": 2, "text": "Bluey made up the rules as she went. First, everyone had to walk like a crab. Happy found this very hard. Clover was surprisingly good at it. Olivia could not stop laughing.", "illustration_url": "", "audio_url": None},
+            {"page_number": 3, "text": "Then Bluey said they had to hop on one foot while counting backwards from ten. Lucas got to seven before falling on the soft grass. Bluey cheered anyway.", "illustration_url": "", "audio_url": None},
+            {"page_number": 4, "text": "Next was the quiet game. Everyone had to be silent for one whole minute. Happy lasted four seconds before barking at a butterfly. Clover won easily because rabbits are very good at being quiet.", "illustration_url": "", "audio_url": None},
+            {"page_number": 5, "text": "For the last game, Bluey's dad Bandit chased them all around the garden. They screamed and ran and hid behind the big bush. Happy hid under Bandit's feet by mistake.", "illustration_url": "", "audio_url": None},
+            {"page_number": 6, "text": "At the end, they all lay on their backs in the garden and looked at the evening sky. 'Good game,' said Bluey. 'Best game,' said Lucas. One by one, their eyes slowly closed.", "illustration_url": "", "audio_url": None},
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 25. Cocomelon
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy, Rabbit and a Song with JJ",
+        "theme_tags": ["animals", "adventure", "friendship"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 240,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {"page_number": 1, "text": "JJ was a little boy with a round happy face. He came to play with Lucas and Olivia, their dog Happy, and their rabbit Clover. 'Let's sing!' said JJ. He always wanted to sing.", "illustration_url": "", "audio_url": None},
+            {"page_number": 2, "text": "JJ started with the alphabet song. Happy tried to sing along and howled on every letter A. Clover thumped her foot in time. Lucas and Olivia clapped along.", "illustration_url": "", "audio_url": None},
+            {"page_number": 3, "text": "Then they sang a bath-time song. Happy ran straight to the paddling pool and jumped in. Water went everywhere. JJ laughed until his round little tummy shook.", "illustration_url": "", "audio_url": None},
+            {"page_number": 4, "text": "Next came the vegetable song. Olivia made a carrot crown for Clover. Lucas made a broccoli wand. JJ made up a silly verse about potatoes that made no sense but everyone loved it.", "illustration_url": "", "audio_url": None},
+            {"page_number": 5, "text": "For the last song, JJ led the sleepy-time song very slowly. The tune was soft and low. Happy's tail wagged more and more slowly. Clover's eyes began to close.", "illustration_url": "", "audio_url": None},
+            {"page_number": 6, "text": "By the end of the song, all five of them — Lucas, Olivia, Happy, Clover, and JJ — were curled up on the rug together. The sun set softly and the room went warm and quiet.", "illustration_url": "", "audio_url": None},
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 26. Tinga Tinga Tales
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy, Rabbit and the Tinga Tinga Animals",
+        "theme_tags": ["animals", "adventure", "friendship", "forest"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 240,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {"page_number": 1, "text": "One morning, a bright painted door appeared in the garden wall. Lucas opened it and found the colourful world of Tinga Tinga. Everything was bright and bold — red, yellow, blue, and green.", "illustration_url": "", "audio_url": None},
+            {"page_number": 2, "text": "Elephant came first, her big ears bright orange. She showed Happy how to spray water with her trunk. Happy tried to copy her using his water bowl and got completely soaked.", "illustration_url": "", "audio_url": None},
+            {"page_number": 3, "text": "Zebra trotted over with his bold black and white stripes. Clover the rabbit looked at the stripes very carefully. She tried to paint her own stripes with mud. She looked very silly and very happy.", "illustration_url": "", "audio_url": None},
+            {"page_number": 4, "text": "Giraffe stretched her long neck down to say hello to Olivia. Olivia stood on her tiptoes to whisper a secret: 'You have the most beautiful spots I have ever seen.' Giraffe smiled and blushed.", "illustration_url": "", "audio_url": None},
+            {"page_number": 5, "text": "Lion told them the story of why Lion roars. He puffed up his chest and let out a big roar. Happy roared back with his best bark. The whole Tinga Tinga world shook with laughter.", "illustration_url": "", "audio_url": None},
+            {"page_number": 6, "text": "When the sun began to set over Tinga Tinga, the animals sang a soft evening song together. Lucas and Olivia hummed along. Happy lay at their feet. Clover was already asleep. They tiptoed back through the painted door and into their own warm home.", "illustration_url": "", "audio_url": None},
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 27. Helper Cars
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy, Rabbit and the Helper Cars",
+        "theme_tags": ["adventure", "animals", "friendship"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 240,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {"page_number": 1, "text": "The Helper Cars drove up the street with their lights on. There was a red fire engine, a yellow digger, a blue police car, and a green ambulance. They all beeped hello to Lucas, Olivia, Happy, and Clover.", "illustration_url": "", "audio_url": None},
+            {"page_number": 2, "text": "The fire engine asked Lucas to help wash her. Lucas got the big sponge. Happy jumped in the bucket of soapy water and made a huge mess. The fire engine laughed a big fire-engine laugh — HONK HONK.", "illustration_url": "", "audio_url": None},
+            {"page_number": 3, "text": "The yellow digger needed help moving a big pile of sand. Olivia scooped with her little spade. Clover dug alongside with her strong back feet. Together they moved the whole pile in no time.", "illustration_url": "", "audio_url": None},
+            {"page_number": 4, "text": "The police car taught them about road safety. 'Always look both ways,' she said. Happy looked left, then right, then left again — very carefully. The police car gave him a tiny gold star sticker.", "illustration_url": "", "audio_url": None},
+            {"page_number": 5, "text": "The green ambulance showed them how to take care of a tiny bird that had hurt its wing. Olivia made a soft nest from a scarf. The bird chirped thank you and flew away when it felt better.", "illustration_url": "", "audio_url": None},
+            {"page_number": 6, "text": "As the Helper Cars drove off into the sunset, they beeped their horns in a little song. Lucas and Olivia waved until they could not see the lights anymore. Happy wagged. Clover yawned. It was time for bed.", "illustration_url": "", "audio_url": None},
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 28. Octonauts
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy, Rabbit and the Octonauts",
+        "theme_tags": ["ocean", "adventure", "animals", "friendship"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 240,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {"page_number": 1, "text": "The Octopod surfaced in the paddling pool. Captain Barnacles waved from the hatch. 'We need your help!' he called. Lucas, Olivia, Happy, and Clover looked at each other and grinned. Adventure time!", "illustration_url": "", "audio_url": None},
+            {"page_number": 2, "text": "Kwazii the cat pirate gave everyone a little wetsuit. Happy's had a hole for his tail. Clover's had holes for her long ears. They all looked very official.", "illustration_url": "", "audio_url": None},
+            {"page_number": 3, "text": "Deep below the pool — which was much deeper on the inside — a family of tiny glowing starfish had lost their way home. Peso the penguin medic checked them all over to make sure they were safe.", "illustration_url": "", "audio_url": None},
+            {"page_number": 4, "text": "Shellington the otter showed Lucas and Olivia his charts. Together they found the starfish's rocky home. Happy swam ahead, his tail acting like a propeller. Clover held the torch.", "illustration_url": "", "audio_url": None},
+            {"page_number": 5, "text": "They guided the starfish family through the kelp and over the coral until they reached their warm rock. The starfish lit up bright pink to say thank you. The whole ocean glowed.", "illustration_url": "", "audio_url": None},
+            {"page_number": 6, "text": "Back on the surface, Captain Barnacles gave everyone an Octonaut badge. Happy wore his on his collar. Clover wore hers on her ear. Lucas and Olivia pinned theirs to their pyjamas. They fell asleep dreaming of the deep blue sea.", "illustration_url": "", "audio_url": None},
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 29. Mixed Adventure 1 — Peppa + Bluey
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy, Rabbit, Peppa and Bluey's Big Picnic",
+        "theme_tags": ["animals", "adventure", "friendship"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 240,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {"page_number": 1, "text": "Peppa Pig brought sandwiches. Bluey brought a ball and three made-up games. Lucas brought juice. Olivia brought biscuits shaped like stars. Happy brought his favourite stick. Clover brought a carrot she had been saving for just this day.", "illustration_url": "", "audio_url": None},
+            {"page_number": 2, "text": "Bluey's first game was Statue. Everyone had to freeze when she called 'STOP!' Happy was the worst at it. He froze — but his tail kept wagging all by itself. He could not help it.", "illustration_url": "", "audio_url": None},
+            {"page_number": 3, "text": "Peppa found the biggest puddle in the park. They all took turns jumping. Clover made the tiniest splash. Happy made the biggest. The sandwiches got a little bit muddy but they ate them anyway.", "illustration_url": "", "audio_url": None},
+            {"page_number": 4, "text": "After lunch, Bluey led a cloud-watching game. She said one cloud looked like a dragon. Peppa said it looked like a sausage. Lucas said it looked like a spaceship. Olivia said it looked like all three at once.", "illustration_url": "", "audio_url": None},
+            {"page_number": 5, "text": "As the afternoon grew soft and warm, Bluey made up a slow, quiet game. Everyone had to whisper everything. Even Happy whispered his barks — tiny little 'wuf wuf wufs' that made everyone smile.", "illustration_url": "", "audio_url": None},
+            {"page_number": 6, "text": "They packed up the picnic as the sky turned pink. On the walk home, Peppa held Olivia's hand and Bluey walked beside Lucas. Happy carried the empty basket. Clover rode on Happy's back. Best picnic ever.", "illustration_url": "", "audio_url": None},
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 30. Mixed Adventure 2 — JJ + Tinga Tinga
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy, Rabbit, JJ and the Singing Safari",
+        "theme_tags": ["animals", "adventure", "friendship", "forest"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 240,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {"page_number": 1, "text": "JJ arrived with his little backpack and a big smile. 'I know a song for every animal,' he said. Olivia thought that was wonderful. Happy thought that sounded like a challenge. They set off into the bright Tinga Tinga world.", "illustration_url": "", "audio_url": None},
+            {"page_number": 2, "text": "When they met Elephant, JJ sang the elephant song. Elephant swayed and lifted her trunk. Happy howled along on the low notes. Clover thumped the beat with her back foot.", "illustration_url": "", "audio_url": None},
+            {"page_number": 3, "text": "Giraffe needed a song with very high notes. JJ tried his best and squeaked on the top ones. Giraffe laughed and tried to sing too. Lucas said it sounded like a beautiful, very tall song.", "illustration_url": "", "audio_url": None},
+            {"page_number": 4, "text": "Zebra wanted a stripy song — one note for black, one note for white, over and over. Olivia clapped the pattern. JJ sang it perfectly. Clover did a little stripey dance between the notes.", "illustration_url": "", "audio_url": None},
+            {"page_number": 5, "text": "At sunset, all the Tinga Tinga animals gathered in a big circle. JJ led everyone in the goodnight song. It was slow and warm. The colours of Tinga Tinga softened as the sky turned gold.", "illustration_url": "", "audio_url": None},
+            {"page_number": 6, "text": "They walked home through the painted door singing the last verse very quietly. JJ's eyes were half closed. Happy's tail did one last slow wag. Clover was already asleep in Olivia's arms. The night was soft and still.", "illustration_url": "", "audio_url": None},
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 31. Mixed Adventure 3 — Helper Cars + Octonauts
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy, Rabbit, the Helper Cars and the Octonauts Save the Day",
+        "theme_tags": ["adventure", "ocean", "animals", "friendship"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 240,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {"page_number": 1, "text": "A big storm had blown sand into the Octopod's docking bay. The Octonauts called the Helper Cars for help. Lucas, Olivia, Happy, and Clover came along too because every big job needs good friends.", "illustration_url": "", "audio_url": None},
+            {"page_number": 2, "text": "The yellow digger scooped sand while Shellington measured how much was left. Happy carried buckets. Clover patted the sand flat with her strong back feet. 'Excellent teamwork!' said Captain Barnacles.", "illustration_url": "", "audio_url": None},
+            {"page_number": 3, "text": "Then the fire engine pumped clean seawater to wash the Octopod's windows. Kwazii polished them with a big cloth. Lucas and Olivia squeegeed the bottom bits. The windows sparkled like crystals.", "illustration_url": "", "audio_url": None},
+            {"page_number": 4, "text": "Peso found a little crab who had got stuck in the propeller. He gently set it free. The crab waved one claw in thanks and scuttled off sideways. Happy tried to wave sideways too. He fell over.", "illustration_url": "", "audio_url": None},
+            {"page_number": 5, "text": "With the docking bay clean, the Octopod could dive again. The Helper Cars beeped their horns in a farewell fanfare. The Octonauts waved from the hatch. Lucas, Olivia, Happy, and Clover cheered from the shore.", "illustration_url": "", "audio_url": None},
+            {"page_number": 6, "text": "That night, Lucas drew a picture of everyone working together. Olivia wrote all their names underneath. Happy sniffed the page proudly. Clover sat in the middle of the drawing, right where she always liked to be.", "illustration_url": "", "audio_url": None},
+        ],
+    },
+    # ------------------------------------------------------------------
+    # 32. All together — grand finale
+    # ------------------------------------------------------------------
+    {
+        "title": "Lucas, Olivia, Happy, Rabbit and All Their Friends' Sleepover Party",
+        "theme_tags": ["animals", "adventure", "friendship", "stars"],
+        "is_curated": True,
+        "is_ai_generated": False,
+        "duration_seconds": 300,
+        "created_for_child_id": None,
+        "created_at": datetime.utcnow(),
+        "pages": [
+            {"page_number": 1, "text": "Lucas and Olivia sent invitations to all their friends. Peppa and George came. Bluey came. JJ came with his whole family. The Tinga Tinga animals peeked through the garden gate. The Helper Cars parked outside. The Octonauts arrived in the Octopod.", "illustration_url": "", "audio_url": None},
+            {"page_number": 2, "text": "Happy ran around greeting everyone at once. Clover bounced so fast she was just a blur. The garden had fairy lights and blankets and pillows everywhere. It looked like the cosiest place in the whole world.", "illustration_url": "", "audio_url": None},
+            {"page_number": 3, "text": "JJ led everyone in a big singalong. Bluey made up a game where you had to sing and spin at the same time. Peppa and George found a puddle by the fountain. Elephant trumpeted the chorus.", "illustration_url": "", "audio_url": None},
+            {"page_number": 4, "text": "Captain Barnacles told a sea story by starlight. The Helper Cars' headlights made a warm glow. The Tinga Tinga animals formed a circle around the littlest ones to keep them cosy.", "illustration_url": "", "audio_url": None},
+            {"page_number": 5, "text": "One by one, friends curled up on their blankets. George fell asleep hugging his toy dinosaur. Clover tucked in beside Happy. JJ's eyes closed mid-song. Bluey said 'goodnight' to each star she could count.", "illustration_url": "", "audio_url": None},
+            {"page_number": 6, "text": "Lucas and Olivia were the last ones awake. They looked around at all their sleeping friends — old ones and new ones, furry ones and scaly ones, big ones and tiny ones. 'We're so lucky,' said Olivia. 'We really are,' said Lucas. Then they closed their eyes too.", "illustration_url": "", "audio_url": None},
+        ],
+    },
 ]
 
 

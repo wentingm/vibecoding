@@ -103,6 +103,39 @@ export default function StoryPlayerScreen() {
     };
   }, [sound]);
 
+  // Background music — pick a track based on story index, loop it softly
+  const bgMusicRef = useRef<Audio.Sound | null>(null);
+  const MUSIC_TRACKS = [
+    require('../assets/music/lullaby1.mp3'),
+    require('../assets/music/lullaby2.mp3'),
+    require('../assets/music/lullaby3.mp3'),
+  ];
+
+  useEffect(() => {
+    let mounted = true;
+    const startMusic = async () => {
+      if (!isAudioAvailable) return;
+      try {
+        await Audio.setAudioModeAsync({ playsInSilentModeIOS: true, allowsRecordingIOS: false, staysActiveInBackground: true });
+        const track = MUSIC_TRACKS[Math.floor(Math.random() * MUSIC_TRACKS.length)];
+        const { sound: music } = await Audio.Sound.createAsync(track, {
+          shouldPlay: true,
+          isLooping: true,
+          volume: 0.18,
+        });
+        if (mounted) bgMusicRef.current = music;
+      } catch (e) {
+        console.log('[BgMusic] failed:', e);
+      }
+    };
+    startMusic();
+    return () => {
+      mounted = false;
+      bgMusicRef.current?.unloadAsync();
+      bgMusicRef.current = null;
+    };
+  }, []);
+
   // Ken Burns animation — restart on every page change
   useEffect(() => {
     if (kbAnim.current) kbAnim.current.stop();
@@ -276,6 +309,8 @@ export default function StoryPlayerScreen() {
 
   const handleClose = () => {
     if (sound) sound.unloadAsync();
+    bgMusicRef.current?.unloadAsync();
+    bgMusicRef.current = null;
     Speech.stop();
     if (timerRef.current) clearInterval(timerRef.current);
     navigation.goBack();

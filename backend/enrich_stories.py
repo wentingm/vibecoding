@@ -76,15 +76,34 @@ async def generate_image(text: str, title: str, filename: str) -> str:
         print(f"    image cached: {filename}")
         return f"{BASE_URL}/static/images/{filename}"
 
+    # Pick art style based on known show titles
+    SHOW_STYLES = {
+        "peppa":      "bright bold flat cartoon style, cheerful pink pig family, green hills, muddy puddles,",
+        "bluey":      "bright Australian cartoon style, blue and orange heeler puppy family, warm colourful backyard,",
+        "cocomelon":  "soft rounded 3D cartoon style, bright primary colours, cheerful toddler characters,",
+        "tinga":      "vibrant African folk-art style, bold flat colours, decorative patterns, colourful animals,",
+        "helper":     "bright bold cartoon style, friendly smiling colourful vehicles, clean roads and buildings,",
+        "octonaut":   "deep ocean adventure cartoon style, glowing underwater scenes, cute animal explorers in wetsuits,",
+        "paw patrol": "bright rescue adventure cartoon style, colourful puppy heroes in uniforms, Adventure Bay scenery,",
+    }
+    style_hint = ""
+    title_lower = title.lower()
+    for key, style in SHOW_STYLES.items():
+        if key in title_lower:
+            style_hint = style
+            break
+
+    base_style = style_hint if style_hint else "gentle soft watercolor style, warm pastel colors, dreamy and calming,"
+
     prompts = [
         (
-            f"A gentle children's book illustration in soft watercolor style, "
-            f"warm pastel colors, dreamy and calming, suitable for bedtime, ages 3-7. "
+            f"A children's book illustration in {base_style} "
+            f"suitable for bedtime, ages 3-7. "
             f"Scene: {text[:180]}. No text or letters in the image."
         ),
         (
-            f"A soft watercolor children's book scene from the story '{title}'. "
-            f"Warm pastel colors, cosy and magical, bedtime atmosphere. "
+            f"A children's book scene in {base_style} "
+            f"from the story '{title}'. Cosy and magical bedtime atmosphere. "
             f"No text or letters in the image."
         ),
     ]
