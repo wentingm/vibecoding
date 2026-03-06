@@ -8,6 +8,7 @@ import {
   Animated,
   Platform,
   Image,
+  ScrollView,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
@@ -335,7 +336,12 @@ export default function StoryPlayerScreen() {
 
           {/* Text panel */}
           <View style={styles.textPanel}>
-            <Text style={styles.pageText}>{currentPage?.text}</Text>
+            <ScrollView
+              contentContainerStyle={styles.textScroll}
+              showsVerticalScrollIndicator={false}
+            >
+              <Text style={styles.pageText}>{currentPage?.text}</Text>
+            </ScrollView>
           </View>
         </Animated.View>
 
@@ -473,14 +479,18 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: RADIUS.xl,
     borderTopRightRadius: RADIUS.xl,
     paddingHorizontal: SPACING.xl,
-    paddingTop: SPACING.xl,
-    paddingBottom: SPACING.lg,
+    paddingTop: SPACING.md,
+    paddingBottom: SPACING.sm,
+  },
+  textScroll: {
+    flexGrow: 1,
     justifyContent: 'center',
+    paddingVertical: SPACING.md,
   },
   pageText: {
     fontSize: FONTS.sizes.md,
     color: COLORS.white,
-    lineHeight: 36,
+    lineHeight: 30,
     textAlign: 'center',
     fontWeight: FONTS.weights.medium as any,
     letterSpacing: 0.3,
