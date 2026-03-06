@@ -135,10 +135,14 @@ export default function StoryPlayerScreen() {
       // Try expo-av first (native build), fall back to expo-speech (Expo Go)
       if (audioUrl && isAudioAvailable) {
         try {
-          await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
+          await Audio.setAudioModeAsync({
+            playsInSilentModeIOS: true,
+            allowsRecordingIOS: false,
+            staysActiveInBackground: true,
+          });
           const { sound: newSound } = await Audio.Sound.createAsync(
             { uri: audioUrl },
-            { shouldPlay: true, rate: 0.88, shouldCorrectPitch: true }
+            { shouldPlay: true, rate: 0.88, shouldCorrectPitch: true, volume: 1.0 }
           );
           setSound(newSound);
           setIsPlaying(true);

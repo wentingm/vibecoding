@@ -55,10 +55,14 @@ export default function StoryModeSelectScreen() {
           );
           if (res.ok) {
             const { url } = await res.json();
-            await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
+            await Audio.setAudioModeAsync({
+              playsInSilentModeIOS: true,
+              allowsRecordingIOS: false,
+              staysActiveInBackground: true,
+            });
             const { sound: s } = await Audio.Sound.createAsync(
               { uri: url },
-              { shouldPlay: true, rate: 0.9, shouldCorrectPitch: true }
+              { shouldPlay: true, rate: 0.9, shouldCorrectPitch: true, volume: 1.0 }
             );
             sound = s;
             return;
